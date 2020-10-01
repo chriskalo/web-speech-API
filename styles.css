@@ -14,13 +14,13 @@ body {
   height: 35vh;
   position: absolute;
   bottom: 0;
-  background-color: yellow;
 }
 
 .content {
-  margin-top: 10%;
+  margin-top: 7%;
 }
 
 .btn {
   height: 35vh;
+  font-size: 5rem;
 }
