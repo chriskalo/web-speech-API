@@ -2,6 +2,7 @@
 navigator.mediaDevices.getUserMedia({ audio: true })
       .then(function(stream) {
         console.log('You let me use your mic!')
+        greetings();
       })
       .catch(function(err) {
         console.log('No mic for you!')
@@ -16,8 +17,7 @@ var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogniti
 var recognition = new SpeechRecognition();
 
 const speech = new SpeechSynthesisUtterance();
-speech.text = "Welcome, for instructions, click anyware on the screen and say instructions. If you know the instructions then you know what to do.";
-window.speechSynthesis.speak(speech);
+
 
 
 
@@ -70,3 +70,9 @@ audio.play();
 }
 }
 }
+
+function greetings(){
+      speech.text = "Welcome, for instructions, click anyware on the screen and say instructions. If you know the instructions then you know what to do.";
+      window.speechSynthesis.speak(speech);
+}
+      
