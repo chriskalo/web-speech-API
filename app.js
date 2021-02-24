@@ -52,7 +52,7 @@ recognition.addEventListener('end', function() {
 
 function clearBox(elementID)
 {
-    document.getElementById(elementID).innerHTML = "";
+    document.getElementById("sound").innerHTML = "";
 }
 
 function playclip() {
@@ -76,4 +76,8 @@ function greetings(){
       window.speechSynthesis.speak(speech);
 //       responsiveVoice.speak("hello world");
 }
+
+speech.addEventListener('end', function(event) {
+  $( '#weather' ).text('');
+});
       
