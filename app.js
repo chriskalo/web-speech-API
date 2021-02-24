@@ -5,6 +5,12 @@ var hasSpoken = false;
 var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
 
+const speech = new SpeechSynthesisUtterance();
+speech.text = "Welcome, for instructions, click anyware on the screen and say instructions. If you know the instructions then you know what to do.";
+window.speechSynthesis.speak(speech);
+
+
+
 recognition.onstart = function () {
   console.log("voice is activated, you can speak");
 };
