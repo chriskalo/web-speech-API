@@ -78,6 +78,7 @@ function greetings(){
 }
 
 speech.addEventListener('end', function(event) {
-  $( '#weather' ).text('');
+    document.getElementById("sound").innerHTML +=  'test';
+
 });
       
