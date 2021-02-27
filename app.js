@@ -15,6 +15,7 @@ var hasSpoken = false;
 
 var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
+recognition.lang = 'el-Greek';
 
 const speech = new SpeechSynthesisUtterance();
 
