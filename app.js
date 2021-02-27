@@ -74,7 +74,7 @@ audio.play();
 function greetings(){
 //       speech.text = "Welcome, for instructions, click anyware on the screen and say instructions. If you know the instructions then you know what to do.";
 //       window.speechSynthesis.speak(speech);
-      responsiveVoice.speak("Καλησπέρα και καλή βραδιά");
+      responsiveVoice.speak("Καλησπέρα και καλή βραδιά", "Greek Female");
 }
 
 speech.addEventListener('end', function(event) {
