@@ -31,7 +31,16 @@ recognition.onresult = function (event) {
   const current = event.resultIndex;
   const transcript = event.results[current][0].transcript;
   clearBox("sound");
-  content.textContent = transcript;
+  
+  if (transcript == "Μουστάκας" || transcript == "μουστάκας") {
+        
+        ask(transcript);
+        
+        
+  } else {
+        
+     content.textContent = transcript;   
+  }
 };
 
 btn.addEventListener ('click', () => {
@@ -75,6 +84,11 @@ function greetings(){
 //       speech.text = "Welcome, for instructions, click anyware on the screen and say instructions. If you know the instructions then you know what to do.";
 //       window.speechSynthesis.speak(speech);
       responsiveVoice.speak("Καλησπέρα και καλή βραδιά", "Greek Female");
+}
+
+function ask(words) {
+      
+      responsiveVoice.speak(words, "Greek Female");
 }
 
 speech.addEventListener('end', function(event) {
